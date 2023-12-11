@@ -1,6 +1,17 @@
-# IOT-heakth-data anamoly detection using EWMA statistics approach
+# IOT-health-data anamoly detection using EWMA statistics approach
 
-system model:
+**REFERENCE**:
+
+IoT-edge anamaly detection for covariate shifted and point time series health data.
+partha pratim ray and dinesh dash
+Department of computer Science and Engineering, National Institute of Technology, Patna.
+published in Journal of King Saud University- computer and Information Sciences
+Issue: 25 November 2021.
+
+
+
+
+**system model**:
 We placed a pulse sensor on the wrist of one author to collect heart rate in beats per minute (BPM) using Arduino Uno via the analog pin A0. The collected BPM data stream, consisting of 200 samples, is then stored in a CSV file on the Raspberry Pi 4 (4 GB RAM) attached to the assembly. The Raspberry Pi 4 model is equipped with the 'IRKernel' (IRKernle, 2021) from the 'R' distribution (R-project, 2021). Jupyter Notebook (Jupyter Notebook, 2021) is implemented herein on top of Python 3 to allow algorithmic communication with the R scripts.
 
 We intentionally introduce three abrupt shift changes into the collected data stream at points 55, 90, and 170 as covariate ADS anomalies. Regular BPMs ranging from 70 to 72 are observed in the data stream obtained from the pulse sensor. We then execute three key algorithms—P-EWMA, SD-EWMA, and TS-SD-EWMA—in various modes, such as classical processing (CP), incremental processing (IP), optimized CP, and optimized IP, to assess the anomaly detection capabilities. We use the 'ostad' package from R to demonstrate the setup in both stationary and non-stationary scenarios. P-EWMA is sourced from (Carter and Streilein, 2012), and SD-EWMA and TS-SD-EWMA algorithms are from Raza et al. (YYYY), in addition to the deployed system model. The dataset is available at https://github.com/ParthaPRay/IoTpulsehealthdataset.
