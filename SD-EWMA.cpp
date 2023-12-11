@@ -106,7 +106,7 @@ int main()
     }
     for(int i=0;i<200;i++)
     {
-        cout<<time[i]<<" "<<heartbeat[i]<<" "<<error[i]<<" "<<var[i]<<" "<<z[i]<<" "<<ucl[i]<<" "<<lcl[i]<<" "<<endl;
+        cout<<time[i]<<" "<<heartbeat[i]<<" "/*<<error[i]<<" "<<var[i]<<" "*/<<z[i]<<" "<<ucl[i]<<" "<<lcl[i]<<" "<<endl;
     }
 
 
